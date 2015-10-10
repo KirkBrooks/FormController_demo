@@ -98,6 +98,8 @@ To run a method when the user clicks the accept button include the methodname as
 
 If you include a helpMethod the help button is made visible and that method runs when it's clicked. 
 
+###Alignment Guides too
+The dotted blue lines in the background of the inhereted form are for alining objects. They are one page 0 and set to be invisible. They can be removed or changed with no effect. 
 ##Useful object methods
 Here are a copule of methods I find really useful for working with objects on forms. 
 - **Object_get_valueText** (object name ; {subform name}) => object's value as text
