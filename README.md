@@ -106,5 +106,5 @@ Here are a copule of methods I find really useful for working with objects on fo
 - **Object_set_toPointer** (object name; pointer) 
     Will set the object to the value of whatever the pointer references. Converts pointer data to object type. 
   
-  ##Hope this helps
+##Hope this helps
   These techniques helped me very much to improve my 4D forms. I hope you find them helpful too. 
