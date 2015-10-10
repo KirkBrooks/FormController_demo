@@ -58,9 +58,11 @@ Run **CONTACT_DEMO** first. This is a simple method which opens a little dialog 
 Now check out the Messages table. This is an actual input form instead of a dialog. Just double click on a record from the list. Notice the familiar 4D vRecNum variable is there too - but I changed two things: I made it a form variable instead of a process variable and I moved the code to the form controller instead of the object. 
 
 ##This idea scales well
-These are simple examples. I have some very complex forms that run to 400+ lines. That kind of complexity is extremely difficult to manage if you have to looking into individual button/list/field/variable/listbox/webarea objects to see what that object is doing and how it relates to the rest of the group. Having all the objects refer to the single controller method gets the focus in one place. I can group the various action calls (my term) for each of editing. I can move long processing into other methods and retain a logical representaton of what's going on.
+These are simple examples. I have some very complex forms that run to 400+ lines. That kind of complexity is extremely difficult to manage if you have to go looking into individual button/list/field/variable/listbox/webarea objects to see what that object is doing and how it relates to the rest of the group. Having all the objects refer to the single controller method gets the focus in one place. I can group the various action calls (my term) for each of editing. I can move long processing into other methods and retain a logical representaton of what's going on.
 
 Another nice feature is I can duplicate objects on the form and only need to change the object name to have it work. This makes laying in columns of option buttons really easy. And if I forget to 'wire up' one of them the error pops up when it gets clicked.
+
+Sometimes it's useful to have a single form method for all input forms on a table. I do this with less complicated tables. The form controller can have all sorts of action calls on it but you only reference the ones you need from specific objects. So you can catalog all of the actions that may be taken from a form in the form controller and expose them only whne you make a suitably named object.
 
 ##This makes subforms much easier to work with
 The promise of subforms is to be able to build truly portable forms that can be dropped anywhere (mostly). This is a little beyond the scope of this demo but a subform with a single form controller like this is much easier to manage.
